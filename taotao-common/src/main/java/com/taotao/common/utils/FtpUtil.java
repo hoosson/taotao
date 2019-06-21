@@ -50,6 +50,12 @@ public class FtpUtil {
 				ftp.disconnect();
 				return result;
 			}
+			
+			//将客户端设置为被动模式
+			//ftp.enterLocalPassiveMode();
+			//ftp..enterLocalActiveMode();    //主动模式(默认)
+			//ftp.setControlEncoding("UTF-8");
+			
 			//切换到上传目录
 			if (!ftp.changeWorkingDirectory(basePath+filePath)) {
 				//如果目录不存在创建目录
@@ -70,6 +76,7 @@ public class FtpUtil {
 			//设置上传文件的类型为二进制类型
 			ftp.setFileType(FTP.BINARY_FILE_TYPE);
 			//上传文件
+			System.out.println(ftp.storeFile(filename, input));
 			if (!ftp.storeFile(filename, input)) {
 				return result;
 			}
