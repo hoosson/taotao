@@ -15,12 +15,6 @@ import org.apache.commons.net.ftp.FTPReply;
 
 /**
  * ftp上传下载工具类
- * <p>Title: FtpUtil</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年7月29日下午8:11:51
- * @version 1.0
  */
 public class FtpUtil {
 
@@ -31,7 +25,7 @@ public class FtpUtil {
 	 * @param username FTP登录账号 
 	 * @param password FTP登录密码 
 	 * @param basePath FTP服务器基础目录
-	 * @param filePath FTP服务器文件存放路径。例如分日期存放：/2015/01/01。文件的路径为basePath+filePath
+	 * @param filePath FTP服务器文件存放路径。例如分日期存放：/2018/01/01。文件的路径为basePath+filePath
 	 * @param filename 上传到FTP服务器上的文件名 
 	 * @param input 输入流 
 	 * @return 成功返回true，否则返回false 
@@ -51,11 +45,6 @@ public class FtpUtil {
 				return result;
 			}
 			
-			//将客户端设置为被动模式
-			//ftp.enterLocalPassiveMode();
-			//ftp..enterLocalActiveMode();    //主动模式(默认)
-			//ftp.setControlEncoding("UTF-8");
-			
 			//切换到上传目录
 			if (!ftp.changeWorkingDirectory(basePath+filePath)) {
 				//如果目录不存在创建目录
@@ -73,10 +62,11 @@ public class FtpUtil {
 					}
 				}
 			}
-			//设置上传文件的类型为二进制类型
-			ftp.setFileType(FTP.BINARY_FILE_TYPE);
+			//ftp.enterLocalPassiveMode(); //将客户端设置为被动模式
+			//ftp..enterLocalActiveMode(); //主动模式(默认)
+			//ftp.setControlEncoding("UTF-8");
+			ftp.setFileType(FTP.BINARY_FILE_TYPE);//设置上传文件的类型为二进制类型
 			//上传文件
-			System.out.println(ftp.storeFile(filename, input));
 			if (!ftp.storeFile(filename, input)) {
 				return result;
 			}
@@ -151,7 +141,7 @@ public class FtpUtil {
 	public static void main(String[] args) {
 		try {  
 	        FileInputStream in=new FileInputStream(new File("D:\\temp\\image\\gaigeming.jpg"));  
-	        boolean flag = uploadFile("192.168.25.133", 21, "ftpuser", "ftpuser", "/home/ftpuser/www/images","/2015/01/21", "gaigeming.jpg", in);  
+	        boolean flag = uploadFile("192.168.25.133", 21, "ftpuser", "ftpuser", "/home/ftpuser/www/images","/2018/01/21", "gaigeming.jpg", in);  
 	        System.out.println(flag);  
 	    } catch (FileNotFoundException e) {  
 	        e.printStackTrace();  
