@@ -13,12 +13,6 @@ import com.taotao.portal.service.SearchService;
 
 /**
  * 商品搜索Controller
- * <p>Title: SearchController</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年9月12日上午9:21:34
- * @version 1.0
  */
 @Controller
 public class SearchController {

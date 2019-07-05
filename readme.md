@@ -46,6 +46,8 @@ RHEL7 & CentOS7   (推荐centos7, 可以直接使用epel源)
 测试条件： 
 	http://rest.taotao.com/rest/itemcat/list (全部商品分类展示json)
 	本地测试： http://localhost:8081/rest/itemcat/list
+	http://localhost:8081/rest/item/desc/商品id   //商品描述
+	http://localhost:8081/rest/item/param/商品id  //规格参数
 
 
 3. taotao-search （搜索）
@@ -60,7 +62,7 @@ RHEL7 & CentOS7   (推荐centos7, 可以直接使用epel源)
 
 本地测试
 	http://localhost:8083/search/query?q=手机
-　　http://localhost:8083/search/manager/importall
+　　http://localhost:8083/search/manager/importall   //导入所有搜索数据
 
  
 

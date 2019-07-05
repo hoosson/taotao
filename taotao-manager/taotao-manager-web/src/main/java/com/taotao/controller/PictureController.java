@@ -13,12 +13,6 @@ import com.taotao.service.PictureService;
 
 /**
  * 上传图片处理
- * <p>Title: PictureController</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年9月4日下午3:18:33
- * @version 1.0
  */
 @Controller
 public class PictureController {

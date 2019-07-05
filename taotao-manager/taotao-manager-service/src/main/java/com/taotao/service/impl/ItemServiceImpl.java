@@ -95,7 +95,6 @@ public class ItemServiceImpl implements ItemService {
 		item.setCreated(new Date());
 		item.setUpdated(new Date());
 		//插入到数据库
-		System.out.println("=====>"+item);
 		itemMapper.insert(item);
 		//添加商品描述信息
 		TaotaoResult result = insertItemDesc(itemId, desc);
@@ -117,7 +116,6 @@ public class ItemServiceImpl implements ItemService {
 	 */
 	private TaotaoResult insertItemDesc(Long itemId, String desc) {
 		TbItemDesc itemDesc = new TbItemDesc();
-		System.out.println(itemId+"===="+desc);
 		itemDesc.setItemId(itemId);
 		itemDesc.setItemDesc(desc);
 		itemDesc.setCreated(new Date());

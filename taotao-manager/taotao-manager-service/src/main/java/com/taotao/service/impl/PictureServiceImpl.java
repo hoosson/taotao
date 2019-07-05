@@ -1,9 +1,7 @@
 package com.taotao.service.impl;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,12 +14,6 @@ import com.taotao.service.PictureService;
 
 /**
  * 图片上传服务
- * <p>Title: PictureServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年9月4日下午2:50:42
- * @version 1.0
  */
 @Service
 public class PictureServiceImpl implements PictureService {

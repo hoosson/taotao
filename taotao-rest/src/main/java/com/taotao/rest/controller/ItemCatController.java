@@ -13,12 +13,6 @@ import com.taotao.rest.service.ItemCatService;
 
 /**
  * 商品分类列表
- * <p>Title: ItemCatController</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年9月7日下午3:02:39
- * @version 1.0
  */
 @Controller
 public class ItemCatController {

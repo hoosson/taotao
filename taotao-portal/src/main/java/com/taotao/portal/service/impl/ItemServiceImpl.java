@@ -18,12 +18,6 @@ import com.taotao.portal.service.ItemService;
 
 /**
  * 商品信息管理Service
- * <p>Title: ItemServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年9月12日下午2:41:57
- * @version 1.0
  */
 @Service
 public class ItemServiceImpl implements ItemService {
@@ -60,11 +54,6 @@ public class ItemServiceImpl implements ItemService {
 
 	/**
 	 * 	取商品描述
-	 * <p>Title: getItemDescById</p>
-	 * <p>Description: </p>
-	 * @param itemId
-	 * @return
-	 * @see com.taotao.portal.service.ItemService#getItemDescById(java.lang.Long)
 	 */
 	@Override
 	public String getItemDescById(Long itemId) {
@@ -87,11 +76,6 @@ public class ItemServiceImpl implements ItemService {
 
 	/**
 	 * 根据商品id查询规格参数
-	 * <p>Title: getItemParam</p>
-	 * <p>Description: </p>
-	 * @param itemId
-	 * @return
-	 * @see com.taotao.portal.service.ItemService#getItemParam(java.lang.Long)
 	 */
 	@Override
 	public String getItemParam(Long itemId) {

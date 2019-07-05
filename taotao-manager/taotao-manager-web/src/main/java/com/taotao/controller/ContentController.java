@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.taotao.common.pojo.EUDataGridResult;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.pojo.TbContent;
 import com.taotao.service.ContentService;
@@ -31,4 +32,27 @@ public class ContentController {
 		TaotaoResult result = contentService.insertContent(content);
 		return result;
 	}
+	
+	//加载列表
+	@RequestMapping("/query/list")
+	@ResponseBody
+	public EUDataGridResult getContentList(Long page, Long rows){
+		EUDataGridResult result = contentService.getContentList(page, rows);
+		return result;
+	}
+	
+	//删除
+	/*@RequestMapping("/content/delete")
+	@ResponseBody
+	public TaotaoResult deleteContent(String ids){
+		return contentService.deleteContent(ids);
+	}
+	
+	//更新
+	@RequestMapping("/rest/content/edit")
+	@ResponseBody
+	public TaotaoResult updateItem(TbContent content){
+		TaotaoResult result=contentService.updateContent(content);
+		return result;
+	}*/
 }

@@ -16,12 +16,6 @@ import com.taotao.rest.service.ItemCatService;
 
 /**
  * 商品分类服务
- * <p>Title: ItemCatServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年9月7日下午2:44:41
- * @version 1.0
  */
 @Service
 public class ItemCatServiceImpl implements ItemCatService {
@@ -40,10 +34,6 @@ public class ItemCatServiceImpl implements ItemCatService {
 	
 	/**
 	 * 查询分类列表
-	 * <p>Title: getCatList</p>
-	 * <p>Description: </p>
-	 * @param parentId
-	 * @return
 	 */
 	private List<?> getCatList(long parentId) {
 		//创建查询条件
